@@ -1,173 +1,130 @@
 <!DOCTYPE html>
-<html lang="bg" class="scroll-smooth">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги | Д. Велков</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bgDark: '#0D1117',
-                        bgPanel: '#161B22',
-                        borderDark: '#30363D',
-                        syntaxPink: '#FF7B72',
-                        syntaxBlue: '#79C0FF',
-                        syntaxGreen: '#A5D6FF',
-                        syntaxComment: '#8B949E'
-                    },
-                    fontFamily: {
-                        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
-                        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Услуги: уебсайт, Google & Apple Maps, социални мрежи | Velkow Digital</title>
+<meta name="description" content="Изработка на уебсайт от 140 €, създаване и поддръжка на Google и Apple Maps профил, управление на Facebook, Instagram и TikTok. Пакетни отстъпки.">
+<link rel="canonical" href="https://velkoww.com/services">
+<link rel="alternate" hreflang="bg" href="https://velkoww.com/services">
+<link rel="alternate" hreflang="en" href="https://velkoww.com/en/services">
+<link rel="alternate" hreflang="x-default" href="https://velkoww.com/services">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Velkow Digital">
+<meta property="og:title" content="Услуги: уебсайт, Google & Apple Maps, социални мрежи | Velkow Digital">
+<meta property="og:description" content="Изработка на уебсайт от 140 €, създаване и поддръжка на Google и Apple Maps профил, управление на Facebook, Instagram и TikTok. Пакетни отстъпки.">
+<meta property="og:url" content="https://velkoww.com/services">
+<meta property="og:image" content="https://velkoww.com/assets/img/og-bg.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="bg_BG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F7F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1014" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preload" href="/assets/fonts/inter-var-latin-cyrillic.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="bg-bgDark text-[#C9D1D9] font-sans antialiased min-h-screen flex flex-col selection:bg-syntaxBlue selection:text-bgDark relative">
-
-    <!-- Topbar IDE style -->
-    <header class="border-b border-borderDark bg-[#010409] sticky top-0 z-50">
-        <div class="flex items-center justify-between px-4 h-14 max-w-7xl mx-auto">
-            
-            <!-- Logo / Terminal Prompt -->
-            <a href="index.html" class="flex items-center gap-2 group">
-                <span class="text-syntaxPink font-mono font-bold text-xl">>_</span>
-                <span class="font-mono font-bold text-white tracking-tight group-hover:text-syntaxBlue transition-colors">denis.velkov</span>
-            </a>
-
-            <!-- Desktop Nav (Tabs like code editor but with CLEAR text) -->
-            <nav id="desktop-menu" class="hidden md:flex h-full">
-                <a href="index.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
-                    <span class="text-syntaxPink font-mono mr-2">{}</span>Начало
-                </a>
-                <a href="services.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
-                    <span class="text-syntaxBlue font-mono mr-2">{}</span>Услуги
-                </a>
-                <a href="portfolio.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
-                    <span class="text-[#D2A8FF] font-mono mr-2">{}</span>Проекти
-                </a>
-                <a href="contacts.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
-                    <span class="text-[#7EE787] font-mono mr-2">{}</span>Контакти
-                </a>
-            </nav>
-
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="md:hidden text-syntaxComment hover:text-white p-2 focus:outline-none">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- Mobile Dropdown - FIXED POSITIONING -->
-    <div id="mobile-menu" class="hidden absolute top-14 left-0 w-full bg-bgPanel border-b border-borderDark z-40 md:hidden shadow-2xl">
-        <div class="flex flex-col font-sans font-semibold text-base py-2">
-            <a href="index.html" class="px-6 py-4 border-b border-borderDark/50 hover:bg-borderDark/50 text-white"><span class="text-syntaxPink font-mono mr-3">{}</span>Начало</a>
-            <a href="services.html" class="px-6 py-4 border-b border-borderDark/50 hover:bg-borderDark/50 text-white"><span class="text-syntaxBlue font-mono mr-3">{}</span>Услуги</a>
-            <a href="portfolio.html" class="px-6 py-4 border-b border-borderDark/50 hover:bg-borderDark/50 text-white"><span class="text-[#D2A8FF] font-mono mr-3">{}</span>Проекти</a>
-            <a href="contacts.html" class="px-6 py-4 hover:bg-borderDark/50 text-white"><span class="text-[#7EE787] font-mono mr-3">{}</span>Контакти</a>
-        </div>
+<body>
+<a class="skip" href="#main">Към съдържанието</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Velkow Digital – начало"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="var(--accent)"/><path d="M9.5 10.5 17 24l7.5-13.5" fill="none" stroke="var(--accent-ink)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Velkow<small>digital</small></span></a>
+    <nav aria-label="Меню"><ul class="menu"><li><a href="/">Начало</a></li><li><a href="/services" aria-current="page">Услуги</a></li><li><a href="/prices">Цени</a></li><li><a href="/portfolio">Проекти</a></li><li><a href="/contacts">Контакти</a></li></ul></nav>
+    <div class="tools">
+      <a class="icon-btn" href="/en/services" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+      <button class="icon-btn theme-btn" type="button" aria-label="Theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <a class="btn btn-primary btn-sm header-cta" href="/contacts#form">Безплатен демо</a>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Меню"><a href="/">Начало</a><a href="/services" aria-current="page">Услуги</a><a href="/prices">Цени</a><a href="/portfolio">Проекти</a><a href="/contacts">Контакти</a></nav>
+</header>
+<main id="main">
 
-    <!-- Main Content -->
-    <main class="flex-grow max-w-7xl mx-auto w-full px-4 py-8 md:py-16 relative">
-        
-        <!-- Abstract Code Background grid -->
-        <div class="absolute inset-0 pointer-events-none opacity-20" 
-             style="background-image: radial-gradient(#30363D 1px, transparent 1px); background-size: 32px 32px;"></div>
-
-        <section class="max-w-6xl mx-auto animate-fade-in relative z-10">
-            <div class="mb-12 border-b border-borderDark pb-6">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">Услуги & Експертиза</h2>
-                <p class="font-mono text-syntaxComment">/* Дигитални решения за вашия бизнес */</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-syntaxBlue transition-colors group relative overflow-hidden flex flex-col">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-syntaxBlue scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-                    <div class="font-mono text-xs text-syntaxComment mb-4">// 01. Web Development</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Изработка на Уебсайтове</h3>
-                    <p class="text-[#8B949E] mb-6 leading-relaxed flex-grow">
-                        Светкавични статични и динамични сайтове без излишни платформи. 
-                        Пиша чист <span class="text-syntaxBlue font-mono">HTML/CSS/JS</span>, гарантиращ 99/100 PageSpeed.
-                    </p>
-                    <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
-                        <span class="text-syntaxPink">return</span> {<br>
-                        &nbsp;&nbsp;скорост: <span class="text-[#79C0FF]">"Светкавична"</span>,<br>
-                        &nbsp;&nbsp;хостинг: <span class="text-[#79C0FF]">0 лв.</span><br>
-                        };
-                    </div>
-                </div>
-                <!-- Service 2 -->
-                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-[#7EE787] transition-colors group relative overflow-hidden flex flex-col">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#7EE787] scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-                    <div class="font-mono text-xs text-syntaxComment mb-4">// 02. Local SEO</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Google Maps Оптимизация</h3>
-                    <p class="text-[#8B949E] mb-6 leading-relaxed flex-grow">
-                        Пълна оптимизация на Google профили. Изкарвам бизнесите на първи позиции при търсене по локация.
-                    </p>
-                    <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
-                        <span class="text-syntaxPink">await</span> <span class="text-[#D2A8FF]">optimize</span>({<br>
-                        &nbsp;&nbsp;platform: <span class="text-[#A5D6FF]">'GMB'</span>,<br>
-                        &nbsp;&nbsp;goal: <span class="text-[#A5D6FF]">'Топ 3'</span><br>
-                        });
-                    </div>
-                </div>
-                <!-- Service 3 -->
-                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-[#D2A8FF] transition-colors group relative overflow-hidden flex flex-col">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-[#D2A8FF] scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-                    <div class="font-mono text-xs text-syntaxComment mb-4">// 03. Social Media</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Социални Мрежи</h3>
-                    <p class="text-[#8B949E] mb-6 leading-relaxed flex-grow">
-                        Създаване, развитие и цялостна поддръжка на страници. Изграждане на бранд идентичност и ангажиране на аудиторията.
-                    </p>
-                    <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
-                        <span class="text-syntaxPink">new</span> <span class="text-[#D2A8FF]">SocialManager</span>({<br>
-                        &nbsp;&nbsp;мрежи: [<span class="text-[#A5D6FF]">'FB'</span>, <span class="text-[#A5D6FF]">'IG'</span>],<br>
-                        &nbsp;&nbsp;цел: <span class="text-[#A5D6FF]">'Растеж'</span><br>
-                        });
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Audit CTA -->
-            <div class="mt-8 bg-gradient-to-r from-bgPanel to-[#1f2937] border border-borderDark rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-syntaxPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        Искате одит на текущия си код, сайт или мрежи?
-                    </h3>
-                    <p class="text-[#8B949E]">Заявете безплатен преглед на вашето онлайн присъствие.</p>
-                </div>
-                <a href="contacts.html" class="whitespace-nowrap font-mono bg-borderDark hover:bg-white hover:text-bgDark text-white px-6 py-3 rounded transition-colors font-bold border border-borderDark">
-                    > Execute_Audit
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Status Bar Footer -->
-    <footer class="bg-syntaxBlue text-bgDark font-mono text-xs py-1.5 px-4 flex justify-between items-center z-10 relative mt-auto">
-        <div class="flex items-center gap-4">
-            <span class="font-bold flex items-center gap-1">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-7 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm7 7.5a.5.5 0 01-.5.5h-6a.5.5 0 010-1h6a.5.5 0 01.5.5z"></path></svg>
-                main*
-            </span>
-            <span class="hidden sm:inline">UTF-8</span>
-            <span class="hidden sm:inline">HTML</span>
+<div class="wrap page-head">
+  <span class="eyebrow">Услуги</span>
+  <h1>Всичко за онлайн присъствието на бизнеса ви</h1>
+  <p class="lead">Вземете само това, което ви трябва, или комбинирайте услугите и спестете с пакетната отстъпка.</p>
+</div>
+<section id="web">
+  <div class="wrap grid grid-2" style="align-items:start">
+    <div><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="15" rx="2"/><path d="M2.5 8.5h19"/><path d="m9 13-2 2 2 2M15 13l2 2-2 2"/></svg></div><h2>Изработка на уебсайт</h2>
+      <p class="lead">Сайт, който зарежда бързо, изглежда добре на телефон и води клиента директно към обаждане.</p>
+      <p class="price">от 140 €<span class="req">*</span></p>
+      <p class="note-red" style="font-size:.92rem">* Цената варира според големината на сайта и обема информация.</p></div>
+    <div class="card"><h3>Включено в цената</h3><ul class="checks">
+      <li>Изграждане на сайта (адаптиран за телефон, таблет и компютър)</li>
+      <li>Публикуване онлайн</li>
+      <li>Лого за сайта</li>
+      <li>Регистрация в Google и Bing/Yahoo за по-бързо откриване в търсачките</li>
+      <li>Хостинг (без месечна такса)</li>
+      <li>Интеграция с Google Analytics</li>
+      <li>Домейн за първата година</li>
+      <li>1 месец поддръжка</li></ul>
+      <p class="muted" style="margin:0">Месечна поддръжка след това: <b>от 20 €/мес.</b>, по желание.</p></div>
+  </div>
+</section>
+<section id="maps">
+  <div class="wrap grid grid-2" style="align-items:start">
+    <div><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div><h2>Google & Apple Maps</h2>
+      <p class="lead">Когато някой търси „ключар наблизо“ или „фризьор София“, профилът в картите често е първото, което вижда.</p></div>
+    <div class="card"><ul class="price-rows">
+      <li><span>Актуализиране на съществуващ профил</span><b>15 €</b></li>
+      <li><span>Създаване в Google и Apple Maps</span><b>25 €</b></li>
+      <li><span>Месечна поддръжка (по желание)</span><b>10 €/мес.</b></li></ul>
+      <ul class="checks"><li>Пълна информация: работно време, телефон, сайт, услуги</li><li>Добавяне на нови снимки</li><li>Преглед и отговаряне на ревюта</li><li>Следене на статистиките</li><li><b>1 месец поддръжка подарък</b></li></ul></div>
+  </div>
+</section>
+<section id="social">
+  <div class="wrap grid grid-2" style="align-items:start">
+    <div><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></div><h2>Социални мрежи</h2>
+      <p class="lead">Facebook, Instagram и TikTok, които изглеждат професионално и показват, че бизнесът ви е активен.</p></div>
+    <div class="card"><ul class="price-rows">
+      <li><span>Актуализиране на съществуващи профили</span><b>15 €</b></li>
+      <li><span>Създаване на нови профили</span><b>25 €</b></li>
+      <li><span>Месечна поддръжка (по желание)</span><b>20 €/мес.</b></li></ul>
+      <ul class="checks"><li>Обновяване на страниците и модерен вид</li><li>Попълване на информация: работно време, телефон, линк към сайта</li><li>Поддръжка: по 2 публикации седмично във всяка платформа</li><li><b>1 месец поддръжка подарък</b></li></ul></div>
+  </div>
+</section>
+<section class="section-tight">
+  <div class="wrap">
+    <div class="callout discount"><h3><svg width="20" height="20" style="vertical-align:-4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg> Пакетни отстъпки</h3>
+      <p style="margin-bottom:.4em"><b>Сайт + 1 услуга:</b> втората услуга е с 50% отстъпка за създаване/актуализиране и поддръжка.</p>
+      <p style="margin:0"><b>И трите услуги:</b> плащате първите две, а третата (най-евтината) е подарък, заедно с поддръжката ѝ, докато се плаща поддръжката на другите две.</p></div>
+    <div class="btn-row" style="margin-top:24px"><a class="btn btn-primary" href="/prices#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18.5h.01M12 18.5h.01"/></svg> Изчисли цената</a><a class="btn btn-ghost" href="/contacts#form">Поискай безплатен демо</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="var(--accent)"/><path d="M9.5 10.5 17 24l7.5-13.5" fill="none" stroke="var(--accent-ink)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Velkow<small>digital</small></span></a>
+        <p style="margin-top:12px;max-width:340px">Уеб сайтове, Google & Apple Maps и социални мрежи за малки и средни бизнеси.</p>
+        <div class="social">
+          <a class="icon-btn" href="https://www.instagram.com/velkoww_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+          <a class="icon-btn" href="https://www.facebook.com/share/19Hg4BAvfs/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v4H8v7h4v-7h3l.5-4H12V7.8c0-.5.4-.8.8-.8H15z"/></svg></a>
         </div>
-        <div class="flex items-center gap-4">
-            <span>Cloudflare & GitHub</span>
-            <span class="font-bold">&copy; 2026</span>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
+      </div>
+      <div><h3>Страници</h3><ul><li><a href="/">Начало</a></li><li><a href="/services">Услуги</a></li><li><a href="/prices">Цени</a></li><li><a href="/portfolio">Проекти</a></li><li><a href="/contacts">Контакти</a></li><li><a href="/privacy">Поверителност</a></li></ul></div>
+      <div><h3>Контакти</h3><ul>
+        <li>Обаждания: <a href="tel:+359887088557">0887 088 557</a></li>
+        <li>Viber: <a href="viber://chat?number=%2B359897720103">0897 720 103</a></li>
+        <li><a href="mailto:denis@velkoww.com">denis@velkoww.com</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> Velkow Digital · Денис Велков · София</span><a href="/privacy">Поверителност</a></div>
+  </div>
+</footer>
+<nav class="mobile-bar" aria-label="Quick contact">
+  <a class="call" href="tel:+359887088557"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>Обади се</a>
+  <a class="viber" href="viber://chat?number=%2B359897720103"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/><path d="M9.5 9.5c.3 1.8 1.3 3.3 3 4.5"/></svg>Viber</a>
+  <a href="/prices#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18.5h.01M12 18.5h.01"/></svg>Цена</a>
+</nav>
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>
