@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | Денис Велков</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-900 text-slate-100 font-['Inter'] relative min-h-screen flex flex-col">
+    <canvas id="particles"></canvas>
+    
+    <nav class="glass fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                Денис Велков
+            </a>
+            <ul class="nav-links flex space-x-6 text-sm uppercase tracking-wider font-semibold">
+                <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Начало</a></li>
+                <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Услуги</a></li>
+                <li><a href="portfolio.html" class="hover:text-cyan-400 transition-colors">Портфолио</a></li>
+                <li><a href="contacts.html" class="hover:text-cyan-400 transition-colors">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24 pb-12">
+
+        <section class="max-w-6xl mx-auto px-4 animate-fade-in">
+            <h2 class="text-4xl font-bold mb-12 text-center">Какво предлагам?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass p-8 rounded-3xl neon-hover transition-all flex flex-col h-full">
+                    <div class="text-cyan-400 text-4xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold mb-4">Уеб Разработка</h3>
+                    <p class="text-slate-300 mb-4 flex-grow">
+                        Изработка на персонализирани уебсайтове с HTML, CSS и JavaScript. 
+                        Фокус върху чист код, адаптивен дизайн (работи перфектно на телефон и компютър) и изключителна производителност.
+                    </p>
+                    <ul class="text-slate-400 space-y-2 mb-6">
+                        <li>✔️ Фирмени сайтове</li>
+                        <li>✔️ Портфолиа</li>
+                        <li>✔️ Лендинг страници</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-8 rounded-3xl neon-hover transition-all flex flex-col h-full">
+                    <div class="text-blue-500 text-4xl mb-4">📍</div>
+                    <h3 class="text-2xl font-bold mb-4">Google Business & Local SEO</h3>
+                    <p class="text-slate-300 mb-4 flex-grow">
+                        Искате бизнесът ви да излиза първи в Google Maps? Създавам, оптимизирам и управлявам вашия Google Business профил, за да привличате повече локални клиенти.
+                    </p>
+                    <ul class="text-slate-400 space-y-2 mb-6">
+                        <li>✔️ Пълна настройка на профил</li>
+                        <li>✔️ Добавяне на услуги и снимки</li>
+                        <li>✔️ Оптимизация за локални търсения</li>
+                    </ul>
+                </div>
+                
+                <div class="glass p-8 rounded-3xl neon-hover transition-all md:col-span-2 text-center mt-4 border border-cyan-500/30">
+                    <h3 class="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">🎁 Бонус: Безплатен Одит</h3>
+                    <p class="text-slate-300 max-w-2xl mx-auto mb-6">
+                        Имате съществуващ сайт или Google профил? Заявете безплатен бърз одит, за да ви покажа какво може да се подобри.
+                    </p>
+                    <a href="contacts.html" class="inline-block bg-white text-slate-900 font-bold py-2 px-6 rounded-full hover:bg-cyan-400 transition-colors">Заяви одит</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="glass mt-auto py-6 text-center text-slate-400 text-sm">
+        <p>&copy; 2026 Денис Велков. Всички права запазени.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
