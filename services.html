@@ -81,45 +81,72 @@
         <div class="absolute inset-0 pointer-events-none opacity-20" 
              style="background-image: radial-gradient(#30363D 1px, transparent 1px); background-size: 32px 32px;"></div>
 
-        <section class="max-w-5xl mx-auto animate-fade-in relative z-10">
+        <section class="max-w-6xl mx-auto animate-fade-in relative z-10">
             <div class="mb-12 border-b border-borderDark pb-6">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">Услуги & Експертиза</h2>
                 <p class="font-mono text-syntaxComment">/* Дигитални решения за вашия бизнес */</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-syntaxBlue transition-colors group relative overflow-hidden">
+                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-syntaxBlue transition-colors group relative overflow-hidden flex flex-col">
                     <div class="absolute top-0 left-0 w-1 h-full bg-syntaxBlue scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
                     <div class="font-mono text-xs text-syntaxComment mb-4">// 01. Web Development</div>
                     <h3 class="text-2xl font-bold text-white mb-3">Изработка на Уебсайтове</h3>
-                    <p class="text-[#8B949E] mb-6 leading-relaxed">
+                    <p class="text-[#8B949E] mb-6 leading-relaxed flex-grow">
                         Светкавични статични и динамични сайтове без излишни платформи. 
                         Пиша чист <span class="text-syntaxBlue font-mono">HTML/CSS/JS</span>, гарантиращ 99/100 PageSpeed.
                     </p>
                     <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
-                        <span class="text-syntaxPink">function</span> <span class="text-[#D2A8FF]">buildWebsite</span>() {<br>
-                        &nbsp;&nbsp;<span class="text-syntaxPink">return</span> {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;скорост: <span class="text-[#79C0FF]">"Светкавична"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;хостинг: <span class="text-[#79C0FF]">0 лв.</span> <span class="text-syntaxComment">// Cloudflare</span><br>
-                        &nbsp;&nbsp;};<br>
-                        }
+                        <span class="text-syntaxPink">return</span> {<br>
+                        &nbsp;&nbsp;скорост: <span class="text-[#79C0FF]">"Светкавична"</span>,<br>
+                        &nbsp;&nbsp;хостинг: <span class="text-[#79C0FF]">0 лв.</span><br>
+                        };
                     </div>
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-[#7EE787] transition-colors group relative overflow-hidden">
+                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-[#7EE787] transition-colors group relative overflow-hidden flex flex-col">
                     <div class="absolute top-0 left-0 w-1 h-full bg-[#7EE787] scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
                     <div class="font-mono text-xs text-syntaxComment mb-4">// 02. Local SEO</div>
                     <h3 class="text-2xl font-bold text-white mb-3">Google Maps Оптимизация</h3>
-                    <p class="text-[#8B949E] mb-6 leading-relaxed">
+                    <p class="text-[#8B949E] mb-6 leading-relaxed flex-grow">
                         Пълна оптимизация на Google профили. Изкарвам бизнесите на първи позиции при търсене по локация.
                     </p>
                     <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
-                        <span class="text-syntaxPink">await</span> <span class="text-[#D2A8FF]">optimizeProfile</span>({<br>
-                        &nbsp;&nbsp;платформа: <span class="text-[#A5D6FF]">'Google Maps'</span>,<br>
-                        &nbsp;&nbsp;цел: <span class="text-[#A5D6FF]">'Повече клиенти'</span><br>
+                        <span class="text-syntaxPink">await</span> <span class="text-[#D2A8FF]">optimize</span>({<br>
+                        &nbsp;&nbsp;platform: <span class="text-[#A5D6FF]">'GMB'</span>,<br>
+                        &nbsp;&nbsp;goal: <span class="text-[#A5D6FF]">'Топ 3'</span><br>
                         });
                     </div>
                 </div>
+                <!-- Service 3 -->
+                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-[#D2A8FF] transition-colors group relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#D2A8FF] scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+                    <div class="font-mono text-xs text-syntaxComment mb-4">// 03. Social Media</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Социални Мрежи</h3>
+                    <p class="text-[#8B949E] mb-6 leading-relaxed flex-grow">
+                        Създаване, развитие и цялостна поддръжка на страници. Изграждане на бранд идентичност и ангажиране на аудиторията.
+                    </p>
+                    <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
+                        <span class="text-syntaxPink">new</span> <span class="text-[#D2A8FF]">SocialManager</span>({<br>
+                        &nbsp;&nbsp;мрежи: [<span class="text-[#A5D6FF]">'FB'</span>, <span class="text-[#A5D6FF]">'IG'</span>],<br>
+                        &nbsp;&nbsp;цел: <span class="text-[#A5D6FF]">'Растеж'</span><br>
+                        });
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Audit CTA -->
+            <div class="mt-8 bg-gradient-to-r from-bgPanel to-[#1f2937] border border-borderDark rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-syntaxPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Искате одит на текущия си код, сайт или мрежи?
+                    </h3>
+                    <p class="text-[#8B949E]">Заявете безплатен преглед на вашето онлайн присъствие.</p>
+                </div>
+                <a href="contacts.html" class="whitespace-nowrap font-mono bg-borderDark hover:bg-white hover:text-bgDark text-white px-6 py-3 rounded transition-colors font-bold border border-borderDark">
+                    > Execute_Audit
+                </a>
             </div>
         </section>
 
