@@ -1,77 +1,171 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="bg" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги | Денис Велков</title>
+    <title>Услуги | Д. Велков - Dev</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#0D1117',
+                        bgPanel: '#161B22',
+                        borderDark: '#30363D',
+                        syntaxPink: '#FF7B72',
+                        syntaxBlue: '#79C0FF',
+                        syntaxGreen: '#A5D6FF',
+                        syntaxComment: '#8B949E'
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+                        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-slate-900 text-slate-100 font-['Inter'] relative min-h-screen flex flex-col">
-    <canvas id="particles"></canvas>
-    
-    <nav class="glass fixed w-full z-50 top-0 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                Денис Велков
-            </a>
-            <ul class="nav-links flex space-x-6 text-sm uppercase tracking-wider font-semibold">
-                <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Начало</a></li>
-                <li><a href="services.html" class="hover:text-cyan-400 transition-colors">Услуги</a></li>
-                <li><a href="portfolio.html" class="hover:text-cyan-400 transition-colors">Портфолио</a></li>
-                <li><a href="contacts.html" class="hover:text-cyan-400 transition-colors">Контакти</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="bg-bgDark text-[#C9D1D9] font-sans antialiased min-h-screen flex flex-col selection:bg-syntaxBlue selection:text-bgDark">
 
-    <main class="flex-grow pt-24 pb-12">
-
-        <section class="max-w-6xl mx-auto px-4 animate-fade-in">
-            <h2 class="text-4xl font-bold mb-12 text-center">Какво предлагам?</h2>
+    <!-- Topbar IDE style -->
+    <header class="border-b border-borderDark bg-[#010409] sticky top-0 z-50">
+        <div class="flex items-center justify-between px-4 h-14 max-w-7xl mx-auto">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass p-8 rounded-3xl neon-hover transition-all flex flex-col h-full">
-                    <div class="text-cyan-400 text-4xl mb-4">💻</div>
-                    <h3 class="text-2xl font-bold mb-4">Уеб Разработка</h3>
-                    <p class="text-slate-300 mb-4 flex-grow">
-                        Изработка на персонализирани уебсайтове с HTML, CSS и JavaScript. 
-                        Фокус върху чист код, адаптивен дизайн (работи перфектно на телефон и компютър) и изключителна производителност.
+            <!-- Logo / Terminal Prompt -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="text-syntaxPink font-mono font-bold text-xl">>_</span>
+                <span class="font-mono font-bold text-white tracking-tight group-hover:text-syntaxBlue transition-colors">denis.velkov</span>
+            </a>
+
+            <!-- Desktop Nav (Tabs like code editor) -->
+            <nav id="desktop-menu" class="hidden md:flex h-full">
+                <a href="index.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
+                    <span class="text-syntaxPink mr-1">1.</span>index.html
+                </a>
+                <a href="services.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
+                    <span class="text-syntaxBlue mr-1">2.</span>services.js
+                </a>
+                <a href="portfolio.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
+                    <span class="text-[#D2A8FF] mr-1">3.</span>portfolio.css
+                </a>
+                <a href="contacts.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
+                    <span class="text-[#7EE787] mr-1">4.</span>contact.sh
+                </a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden text-syntaxComment hover:text-white p-2 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden bg-bgPanel border-b border-borderDark md:hidden">
+        <div class="flex flex-col font-mono text-sm py-2">
+            <a href="index.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-syntaxPink mr-2">1.</span>index.html</a>
+            <a href="services.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-syntaxBlue mr-2">2.</span>services.js</a>
+            <a href="portfolio.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-[#D2A8FF] mr-2">3.</span>portfolio.css</a>
+            <a href="contacts.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-[#7EE787] mr-2">4.</span>contact.sh</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 py-8 md:py-16 relative">
+        
+        <!-- Abstract Code Background grid -->
+        <div class="absolute inset-0 pointer-events-none opacity-20" 
+             style="background-image: radial-gradient(#30363D 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+        <section class="max-w-5xl mx-auto animate-fade-in relative z-10">
+            
+            <div class="mb-12 border-b border-borderDark pb-6">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">Услуги & Експертиза</h2>
+                <p class="font-mono text-syntaxComment">/* Комплексни дигитални решения, описани в код */</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Service 1: Web Dev -->
+                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-syntaxBlue transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-syntaxBlue scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+                    
+                    <div class="font-mono text-xs text-syntaxComment mb-4">// 01. Web Development</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Изработка на Уебсайтове</h3>
+                    <p class="text-[#8B949E] mb-6 leading-relaxed">
+                        Светкавични статични и динамични сайтове без излишни платформи. 
+                        Пиша чист <span class="text-syntaxBlue font-mono">HTML/CSS/JS</span>, гарантиращ 99/100 PageSpeed и перфектна сигурност.
                     </p>
-                    <ul class="text-slate-400 space-y-2 mb-6">
-                        <li>✔️ Фирмени сайтове</li>
-                        <li>✔️ Портфолиа</li>
-                        <li>✔️ Лендинг страници</li>
-                    </ul>
+                    
+                    <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
+                        <span class="text-syntaxPink">function</span> <span class="text-[#D2A8FF]">buildWebsite</span>() {<br>
+                        &nbsp;&nbsp;<span class="text-syntaxPink">return</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;performance: <span class="text-[#79C0FF]">"Lightning Fast"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;hostingFee: <span class="text-[#79C0FF]">0</span>, <span class="text-syntaxComment">// via Cloudflare</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;responsive: <span class="text-syntaxPink">true</span><br>
+                        &nbsp;&nbsp;};<br>
+                        }
+                    </div>
                 </div>
 
-                <div class="glass p-8 rounded-3xl neon-hover transition-all flex flex-col h-full">
-                    <div class="text-blue-500 text-4xl mb-4">📍</div>
-                    <h3 class="text-2xl font-bold mb-4">Google Business & Local SEO</h3>
-                    <p class="text-slate-300 mb-4 flex-grow">
-                        Искате бизнесът ви да излиза първи в Google Maps? Създавам, оптимизирам и управлявам вашия Google Business профил, за да привличате повече локални клиенти.
+                <!-- Service 2: Local SEO -->
+                <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-[#7EE787] transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-[#7EE787] scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+                    
+                    <div class="font-mono text-xs text-syntaxComment mb-4">// 02. Local SEO</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Google Business & Maps</h3>
+                    <p class="text-[#8B949E] mb-6 leading-relaxed">
+                        Пълна оптимизация на Google профили. Изкарвам бизнесите на първи позиции при търсене по локация, генерирайки реални обаждания и клиенти.
                     </p>
-                    <ul class="text-slate-400 space-y-2 mb-6">
-                        <li>✔️ Пълна настройка на профил</li>
-                        <li>✔️ Добавяне на услуги и снимки</li>
-                        <li>✔️ Оптимизация за локални търсения</li>
-                    </ul>
+                    
+                    <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
+                        <span class="text-syntaxPink">await</span> <span class="text-[#D2A8FF]">optimizeProfile</span>({<br>
+                        &nbsp;&nbsp;platform: <span class="text-[#A5D6FF]">'Google Maps'</span>,<br>
+                        &nbsp;&nbsp;goal: <span class="text-[#A5D6FF]">'Dominate Local Search'</span>,<br>
+                        &nbsp;&nbsp;reviews: <span class="text-[#A5D6FF]">'5 Stars'</span><br>
+                        });
+                    </div>
                 </div>
                 
-                <div class="glass p-8 rounded-3xl neon-hover transition-all md:col-span-2 text-center mt-4 border border-cyan-500/30">
-                    <h3 class="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">🎁 Бонус: Безплатен Одит</h3>
-                    <p class="text-slate-300 max-w-2xl mx-auto mb-6">
-                        Имате съществуващ сайт или Google профил? Заявете безплатен бърз одит, за да ви покажа какво може да се подобри.
-                    </p>
-                    <a href="contacts.html" class="inline-block bg-white text-slate-900 font-bold py-2 px-6 rounded-full hover:bg-cyan-400 transition-colors">Заяви одит</a>
+                <!-- Audit CTA -->
+                <div class="lg:col-span-2 bg-gradient-to-r from-bgPanel to-[#1f2937] border border-borderDark rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-syntaxPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Искате одит на текущия си код/сайт?
+                        </h3>
+                        <p class="text-[#8B949E]">Заявете безплатен преглед на вашия Google Business профил или уебсайт.</p>
+                    </div>
+                    <a href="contacts.html" class="whitespace-nowrap font-mono bg-borderDark hover:bg-white hover:text-bgDark text-white px-6 py-3 rounded transition-colors font-bold border border-borderDark">
+                        > Execute_Audit
+                    </a>
                 </div>
+
             </div>
         </section>
 
     </main>
-    <footer class="glass mt-auto py-6 text-center text-slate-400 text-sm">
-        <p>&copy; 2026 Денис Велков. Всички права запазени.</p>
+
+    <!-- Status Bar Footer -->
+    <footer class="bg-syntaxBlue text-bgDark font-mono text-xs py-1.5 px-4 flex justify-between items-center z-10 relative">
+        <div class="flex items-center gap-4">
+            <span class="font-bold flex items-center gap-1">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-7 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm7 7.5a.5.5 0 01-.5.5h-6a.5.5 0 010-1h6a.5.5 0 01.5.5z"></path></svg>
+                main*
+            </span>
+            <span class="hidden sm:inline">UTF-8</span>
+            <span class="hidden sm:inline">HTML</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <span>Powered by Cloudflare & GitHub</span>
+            <span class="font-bold">&copy; 2026</span>
+        </div>
     </footer>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
