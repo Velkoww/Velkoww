@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги | Д. Велков - Dev</title>
+    <title>Услуги | Д. Велков</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-bgDark text-[#C9D1D9] font-sans antialiased min-h-screen flex flex-col selection:bg-syntaxBlue selection:text-bgDark">
+<body class="bg-bgDark text-[#C9D1D9] font-sans antialiased min-h-screen flex flex-col selection:bg-syntaxBlue selection:text-bgDark relative">
 
     <!-- Topbar IDE style -->
     <header class="border-b border-borderDark bg-[#010409] sticky top-0 z-50">
@@ -41,36 +41,36 @@
                 <span class="font-mono font-bold text-white tracking-tight group-hover:text-syntaxBlue transition-colors">denis.velkov</span>
             </a>
 
-            <!-- Desktop Nav (Tabs like code editor) -->
+            <!-- Desktop Nav (Tabs like code editor but with CLEAR text) -->
             <nav id="desktop-menu" class="hidden md:flex h-full">
-                <a href="index.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
-                    <span class="text-syntaxPink mr-1">1.</span>index.html
+                <a href="index.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
+                    <span class="text-syntaxPink font-mono mr-2">{}</span>Начало
                 </a>
-                <a href="services.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
-                    <span class="text-syntaxBlue mr-1">2.</span>services.js
+                <a href="services.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
+                    <span class="text-syntaxBlue font-mono mr-2">{}</span>Услуги
                 </a>
-                <a href="portfolio.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
-                    <span class="text-[#D2A8FF] mr-1">3.</span>portfolio.css
+                <a href="portfolio.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
+                    <span class="text-[#D2A8FF] font-mono mr-2">{}</span>Проекти
                 </a>
-                <a href="contacts.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-mono hover:bg-bgPanel transition-colors text-syntaxComment hover:text-[#C9D1D9]">
-                    <span class="text-[#7EE787] mr-1">4.</span>contact.sh
+                <a href="contacts.html" class="nav-tab h-full px-5 flex items-center border-b-2 border-transparent text-sm font-sans font-semibold hover:bg-bgPanel transition-colors text-syntaxComment hover:text-white">
+                    <span class="text-[#7EE787] font-mono mr-2">{}</span>Контакти
                 </a>
             </nav>
 
             <!-- Mobile menu button -->
             <button id="mobile-menu-btn" class="md:hidden text-syntaxComment hover:text-white p-2 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden bg-bgPanel border-b border-borderDark md:hidden">
-        <div class="flex flex-col font-mono text-sm py-2">
-            <a href="index.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-syntaxPink mr-2">1.</span>index.html</a>
-            <a href="services.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-syntaxBlue mr-2">2.</span>services.js</a>
-            <a href="portfolio.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-[#D2A8FF] mr-2">3.</span>portfolio.css</a>
-            <a href="contacts.html" class="px-6 py-3 hover:bg-borderDark/50 text-syntaxComment hover:text-white"><span class="text-[#7EE787] mr-2">4.</span>contact.sh</a>
+    <!-- Mobile Dropdown - FIXED POSITIONING -->
+    <div id="mobile-menu" class="hidden absolute top-14 left-0 w-full bg-bgPanel border-b border-borderDark z-40 md:hidden shadow-2xl">
+        <div class="flex flex-col font-sans font-semibold text-base py-2">
+            <a href="index.html" class="px-6 py-4 border-b border-borderDark/50 hover:bg-borderDark/50 text-white"><span class="text-syntaxPink font-mono mr-3">{}</span>Начало</a>
+            <a href="services.html" class="px-6 py-4 border-b border-borderDark/50 hover:bg-borderDark/50 text-white"><span class="text-syntaxBlue font-mono mr-3">{}</span>Услуги</a>
+            <a href="portfolio.html" class="px-6 py-4 border-b border-borderDark/50 hover:bg-borderDark/50 text-white"><span class="text-[#D2A8FF] font-mono mr-3">{}</span>Проекти</a>
+            <a href="contacts.html" class="px-6 py-4 hover:bg-borderDark/50 text-white"><span class="text-[#7EE787] font-mono mr-3">{}</span>Контакти</a>
         </div>
     </div>
 
@@ -82,76 +82,51 @@
              style="background-image: radial-gradient(#30363D 1px, transparent 1px); background-size: 32px 32px;"></div>
 
         <section class="max-w-5xl mx-auto animate-fade-in relative z-10">
-            
             <div class="mb-12 border-b border-borderDark pb-6">
                 <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">Услуги & Експертиза</h2>
-                <p class="font-mono text-syntaxComment">/* Комплексни дигитални решения, описани в код */</p>
+                <p class="font-mono text-syntaxComment">/* Дигитални решения за вашия бизнес */</p>
             </div>
-
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <!-- Service 1: Web Dev -->
+                <!-- Service 1 -->
                 <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-syntaxBlue transition-colors group relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-syntaxBlue scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-                    
                     <div class="font-mono text-xs text-syntaxComment mb-4">// 01. Web Development</div>
                     <h3 class="text-2xl font-bold text-white mb-3">Изработка на Уебсайтове</h3>
                     <p class="text-[#8B949E] mb-6 leading-relaxed">
                         Светкавични статични и динамични сайтове без излишни платформи. 
-                        Пиша чист <span class="text-syntaxBlue font-mono">HTML/CSS/JS</span>, гарантиращ 99/100 PageSpeed и перфектна сигурност.
+                        Пиша чист <span class="text-syntaxBlue font-mono">HTML/CSS/JS</span>, гарантиращ 99/100 PageSpeed.
                     </p>
-                    
                     <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
                         <span class="text-syntaxPink">function</span> <span class="text-[#D2A8FF]">buildWebsite</span>() {<br>
                         &nbsp;&nbsp;<span class="text-syntaxPink">return</span> {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;performance: <span class="text-[#79C0FF]">"Lightning Fast"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;hostingFee: <span class="text-[#79C0FF]">0</span>, <span class="text-syntaxComment">// via Cloudflare</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;responsive: <span class="text-syntaxPink">true</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;скорост: <span class="text-[#79C0FF]">"Светкавична"</span>,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;хостинг: <span class="text-[#79C0FF]">0 лв.</span> <span class="text-syntaxComment">// Cloudflare</span><br>
                         &nbsp;&nbsp;};<br>
                         }
                     </div>
                 </div>
-
-                <!-- Service 2: Local SEO -->
+                <!-- Service 2 -->
                 <div class="bg-bgPanel border border-borderDark rounded-xl p-8 hover:border-[#7EE787] transition-colors group relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-[#7EE787] scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-                    
                     <div class="font-mono text-xs text-syntaxComment mb-4">// 02. Local SEO</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Google Business & Maps</h3>
+                    <h3 class="text-2xl font-bold text-white mb-3">Google Maps Оптимизация</h3>
                     <p class="text-[#8B949E] mb-6 leading-relaxed">
-                        Пълна оптимизация на Google профили. Изкарвам бизнесите на първи позиции при търсене по локация, генерирайки реални обаждания и клиенти.
+                        Пълна оптимизация на Google профили. Изкарвам бизнесите на първи позиции при търсене по локация.
                     </p>
-                    
                     <div class="bg-[#010409] rounded p-4 border border-borderDark font-mono text-sm overflow-x-auto">
                         <span class="text-syntaxPink">await</span> <span class="text-[#D2A8FF]">optimizeProfile</span>({<br>
-                        &nbsp;&nbsp;platform: <span class="text-[#A5D6FF]">'Google Maps'</span>,<br>
-                        &nbsp;&nbsp;goal: <span class="text-[#A5D6FF]">'Dominate Local Search'</span>,<br>
-                        &nbsp;&nbsp;reviews: <span class="text-[#A5D6FF]">'5 Stars'</span><br>
+                        &nbsp;&nbsp;платформа: <span class="text-[#A5D6FF]">'Google Maps'</span>,<br>
+                        &nbsp;&nbsp;цел: <span class="text-[#A5D6FF]">'Повече клиенти'</span><br>
                         });
                     </div>
                 </div>
-                
-                <!-- Audit CTA -->
-                <div class="lg:col-span-2 bg-gradient-to-r from-bgPanel to-[#1f2937] border border-borderDark rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-syntaxPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            Искате одит на текущия си код/сайт?
-                        </h3>
-                        <p class="text-[#8B949E]">Заявете безплатен преглед на вашия Google Business профил или уебсайт.</p>
-                    </div>
-                    <a href="contacts.html" class="whitespace-nowrap font-mono bg-borderDark hover:bg-white hover:text-bgDark text-white px-6 py-3 rounded transition-colors font-bold border border-borderDark">
-                        > Execute_Audit
-                    </a>
-                </div>
-
             </div>
         </section>
 
     </main>
 
     <!-- Status Bar Footer -->
-    <footer class="bg-syntaxBlue text-bgDark font-mono text-xs py-1.5 px-4 flex justify-between items-center z-10 relative">
+    <footer class="bg-syntaxBlue text-bgDark font-mono text-xs py-1.5 px-4 flex justify-between items-center z-10 relative mt-auto">
         <div class="flex items-center gap-4">
             <span class="font-bold flex items-center gap-1">
                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-7 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm7 7.5a.5.5 0 01-.5.5h-6a.5.5 0 010-1h6a.5.5 0 01.5.5z"></path></svg>
@@ -161,7 +136,7 @@
             <span class="hidden sm:inline">HTML</span>
         </div>
         <div class="flex items-center gap-4">
-            <span>Powered by Cloudflare & GitHub</span>
+            <span>Cloudflare & GitHub</span>
             <span class="font-bold">&copy; 2026</span>
         </div>
     </footer>
