@@ -80,7 +80,7 @@ var GA_ID = '';
   }
   if (calc) {
     var P = {
-      site: { setup: 140, maint: 20, variable: true },
+      site: { setup: 160, maint: 20, variable: true },
       social: { create: 25, update: 15, maint: 20 },
       maps: { create: 25, update: 15, maint: 10 }
     };
