@@ -19,14 +19,15 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F7F7F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E1014" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0F14" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/inter-var-latin-cyrillic.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preload" href="/assets/fonts/sofia-sans-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/fonts/unbounded-700.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v=2">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -44,12 +45,11 @@
   <nav id="mobile-menu" class="mobile-menu" aria-label="Menu"><a href="/en/">Home</a><a href="/en/services">Services</a><a href="/en/prices">Pricing</a><a href="/en/portfolio">Work</a><a href="/en/contacts" aria-current="page">Contact</a></nav>
 </header>
 <main id="main">
-
-<div class="wrap page-head">
+<div class="wrap"><div class="page-head">
   <span class="eyebrow">Contact</span>
   <h1>Let's talk about your business</h1>
   <p class="lead">Call, message me on Viber or fill in the form. I reply within 24 hours and build a free demo of your home page.</p>
-</div>
+</div></div>
 <section>
   <div class="wrap grid grid-2" style="align-items:start">
     <div>
@@ -63,9 +63,8 @@
       </ul>
       <p class="muted" style="margin-top:14px;font-size:.92rem">I take calls on +359 887 088 557 and Viber messages on +359 897 720 103.</p>
     </div>
-    <form id="contact-form" class="card form" style="scroll-margin-top:80px">
-      <span id="form" style="position:relative;top:-90px"></span>
-      <h2 style="font-size:1.5rem;margin:0">Free demo or enquiry</h2>
+    <div id="form"><form id="contact-form" class="card form">
+      <h2>Free demo or enquiry</h2>
       <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
       <div class="field"><label for="f-biz">Business / activity</label><input id="f-biz" name="business" type="text" placeholder="e.g. hair salon, Sofia"></div>
       <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
@@ -75,7 +74,7 @@
       <label class="consent"><input type="checkbox" name="consent" value="yes" required> I agree that my data will be used to reply to me. <a href="/en/privacy">Privacy policy</a></label>
       <button class="btn btn-primary" type="submit">Send request</button>
       <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
-    </form>
+    </form></div>
   </div>
 </section>
 </main>
@@ -105,6 +104,6 @@
   <a class="viber" href="viber://chat?number=%2B359897720103"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/><path d="M9.5 9.5c.3 1.8 1.3 3.3 3 4.5"/></svg>Viber</a>
   <a href="/en/prices#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18.5h.01M12 18.5h.01"/></svg>Price</a>
 </nav>
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>
