@@ -19,14 +19,15 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F7F7F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E1014" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0F14" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/inter-var-latin-cyrillic.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preload" href="/assets/fonts/sofia-sans-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/fonts/unbounded-700.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v=2">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -44,12 +45,11 @@
   <nav id="mobile-menu" class="mobile-menu" aria-label="Menu"><a href="/en/">Home</a><a href="/en/services">Services</a><a href="/en/prices" aria-current="page">Pricing</a><a href="/en/portfolio">Work</a><a href="/en/contacts">Contact</a></nav>
 </header>
 <main id="main">
-
-<div class="wrap page-head">
+<div class="wrap"><div class="page-head">
   <span class="eyebrow">Pricing</span>
   <h1>Clear prices, no surprises</h1>
   <p class="lead">Pick what you need in the calculator and see the estimated price right away.</p>
-</div>
+</div></div>
 <section class="section-tight">
   <div class="wrap grid grid-3">
     <article class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="15" rx="2"/><path d="M2.5 8.5h19"/><path d="m9 13-2 2 2 2M15 13l2 2-2 2"/></svg></div><h3>Website</h3><p class="price">from €140<span class="req">*</span></p>
@@ -62,16 +62,17 @@
       <ul class="price-rows"><li><span>Have profiles: refresh</span><b>€15</b></li><li><span>No profiles: create</span><b>€25</b></li><li><span>Maintenance (optional)</span><b>€20/mo</b></li></ul>
       <ul class="checks"><li>2 posts per week per platform</li><li>1 month of maintenance free</li></ul></article>
   </div>
-  <div class="wrap" style="margin-top:20px"><div class="callout discount"><b>Bundle discounts:</b> website + 1 service → the second is 50% off (maintenance too). All three → the cheapest is free, and its maintenance is free while maintenance for the other two is paid.</div></div>
+  <div class="wrap" style="margin-top:20px"><div class="callout discount"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><p><b>Bundle discounts:</b> website + 1 service → the second is 50% off (maintenance too). All three → the cheapest is free, and its maintenance is free while maintenance for the other two is paid.</p></div></div>
 </section>
 
-<section id="calc" style="scroll-margin-top:80px">
+<section id="calc">
   <div class="wrap">
-    <span class="eyebrow">Calculator</span>
-    <h2>Estimate your price</h2>
-    <p class="muted" style="margin-bottom:24px">Choose services, tell me what you already have and whether you want monthly maintenance.</p>
+    <div class="sec-head">
+      <div><span class="eyebrow">Calculator</span><h2>Estimate your price</h2></div>
+      <p>Choose services, tell me what you already have and whether you want monthly maintenance.</p>
+    </div>
     <form class="calc" onsubmit="return false">
-      <div id="calc">
+      <div>
         <div class="calc-item" data-svc="site">
           <label class="calc-head"><input type="checkbox" name="site" checked> Website <span class="from">from €140<span class="req">*</span></span></label>
           <div class="calc-opts"><label><input type="checkbox" name="siteMaint"> <span>Monthly maintenance after the first month (from €20/mo<span class="req">*</span>)</span></label></div>
@@ -96,10 +97,10 @@
         </div>
       </div>
       <aside class="card summary" aria-live="polite">
-        <h3>Estimated price</h3>
+        <p class="receipt-head">Velkow Digital · price estimate</p>
         <div id="calc-out"><p class="sum-empty">Select at least one service to see the price.</p></div>
-        <a id="calc-send" class="btn btn-primary" style="width:100%;margin-top:18px" data-base="/en/contacts" href="/en/contacts#form">Send a request with this selection</a>
-        <p class="note-red" style="font-size:.88rem;margin:14px 0 0">* The website and website-maintenance prices are starting prices and depend on the size of the site and the amount of content. Maps and social media prices are fixed.</p>
+        <a id="calc-send" class="btn btn-primary" data-base="/en/contacts" href="/en/contacts#form">Send a request with this selection</a>
+        <p class="note-red"><span class="req">*</span> The website and website-maintenance prices are starting prices and depend on the size of the site and the amount of content. Maps and social media prices are fixed.</p>
       </aside>
     </form>
   </div>
@@ -107,7 +108,7 @@
 
 <section class="section-tight">
   <div class="wrap grid grid-2">
-    <div class="callout"><h3><svg width="20" height="20" style="vertical-align:-4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg> Free demo website</h3><p style="margin:0">With every request I build your home page for free, so you can see roughly how the site will look and get to know my work.</p></div>
+    <div class="callout"><h3>Free demo website</h3><p style="margin:0">With every request I build your home page for free, so you can see roughly how the site will look and get to know my work.</p></div>
     <div class="callout"><h3>50 / 50 payment</h3><p style="margin:0">50% deposit when work starts and the remaining 50% when everything is ready. The website is ready within 7 working days.</p></div>
   </div>
 </section>
@@ -138,6 +139,6 @@
   <a class="viber" href="viber://chat?number=%2B359897720103"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/><path d="M9.5 9.5c.3 1.8 1.3 3.3 3 4.5"/></svg>Viber</a>
   <a href="/en/prices#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18.5h.01M12 18.5h.01"/></svg>Price</a>
 </nav>
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>

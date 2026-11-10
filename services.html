@@ -19,14 +19,15 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="bg_BG">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F7F7F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E1014" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0F14" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/inter-var-latin-cyrillic.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preload" href="/assets/fonts/sofia-sans-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/fonts/unbounded-700.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v=2">
 </head>
 <body>
 <a class="skip" href="#main">Към съдържанието</a>
@@ -44,18 +45,17 @@
   <nav id="mobile-menu" class="mobile-menu" aria-label="Меню"><a href="/">Начало</a><a href="/services" aria-current="page">Услуги</a><a href="/prices">Цени</a><a href="/portfolio">Проекти</a><a href="/contacts">Контакти</a></nav>
 </header>
 <main id="main">
-
-<div class="wrap page-head">
+<div class="wrap"><div class="page-head">
   <span class="eyebrow">Услуги</span>
   <h1>Всичко за онлайн присъствието на бизнеса ви</h1>
   <p class="lead">Вземете само това, което ви трябва, или комбинирайте услугите и спестете с пакетната отстъпка.</p>
-</div>
-<section id="web">
-  <div class="wrap grid grid-2" style="align-items:start">
+</div></div>
+<div class="svc-sec" id="web">
+  <div class="wrap svc">
     <div><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="15" rx="2"/><path d="M2.5 8.5h19"/><path d="m9 13-2 2 2 2M15 13l2 2-2 2"/></svg></div><h2>Изработка на уебсайт</h2>
       <p class="lead">Сайт, който зарежда бързо, изглежда добре на телефон и води клиента директно към обаждане.</p>
       <p class="price">от 140 €<span class="req">*</span></p>
-      <p class="note-red" style="font-size:.92rem">* Цената варира според големината на сайта и обема информация.</p></div>
+      <p class="note-red"><span class="req">*</span> Цената варира според големината на сайта и обема информация.</p></div>
     <div class="card"><h3>Включено в цената</h3><ul class="checks">
       <li>Изграждане на сайта (адаптиран за телефон, таблет и компютър)</li>
       <li>Публикуване онлайн</li>
@@ -67,10 +67,10 @@
       <li>1 месец поддръжка</li></ul>
       <p class="muted" style="margin:0">Месечна поддръжка след това: <b>от 20 €/мес.</b>, по желание.</p></div>
   </div>
-</section>
-<section id="maps">
-  <div class="wrap grid grid-2" style="align-items:start">
-    <div><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div><h2>Google & Apple Maps</h2>
+</div>
+<div class="svc-sec" id="maps">
+  <div class="wrap svc">
+    <div><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div><h2>Google &amp; Apple Maps</h2>
       <p class="lead">Когато някой търси „ключар наблизо“ или „фризьор София“, профилът в картите често е първото, което вижда.</p></div>
     <div class="card"><ul class="price-rows">
       <li><span>Актуализиране на съществуващ профил</span><b>15 €</b></li>
@@ -78,9 +78,9 @@
       <li><span>Месечна поддръжка (по желание)</span><b>10 €/мес.</b></li></ul>
       <ul class="checks"><li>Пълна информация: работно време, телефон, сайт, услуги</li><li>Добавяне на нови снимки</li><li>Преглед и отговаряне на ревюта</li><li>Следене на статистиките</li><li><b>1 месец поддръжка подарък</b></li></ul></div>
   </div>
-</section>
-<section id="social">
-  <div class="wrap grid grid-2" style="align-items:start">
+</div>
+<div class="svc-sec" id="social">
+  <div class="wrap svc">
     <div><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></div><h2>Социални мрежи</h2>
       <p class="lead">Facebook, Instagram и TikTok, които изглеждат професионално и показват, че бизнесът ви е активен.</p></div>
     <div class="card"><ul class="price-rows">
@@ -89,12 +89,12 @@
       <li><span>Месечна поддръжка (по желание)</span><b>20 €/мес.</b></li></ul>
       <ul class="checks"><li>Обновяване на страниците и модерен вид</li><li>Попълване на информация: работно време, телефон, линк към сайта</li><li>Поддръжка: по 2 публикации седмично във всяка платформа</li><li><b>1 месец поддръжка подарък</b></li></ul></div>
   </div>
-</section>
+</div>
 <section class="section-tight">
   <div class="wrap">
-    <div class="callout discount"><h3><svg width="20" height="20" style="vertical-align:-4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg> Пакетни отстъпки</h3>
+    <div class="callout discount"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><div><h3>Пакетни отстъпки</h3>
       <p style="margin-bottom:.4em"><b>Сайт + 1 услуга:</b> втората услуга е с 50% отстъпка за създаване/актуализиране и поддръжка.</p>
-      <p style="margin:0"><b>И трите услуги:</b> плащате първите две, а третата (най-евтината) е подарък, заедно с поддръжката ѝ, докато се плаща поддръжката на другите две.</p></div>
+      <p><b>И трите услуги:</b> плащате първите две, а третата (най-евтината) е подарък, заедно с поддръжката ѝ, докато се плаща поддръжката на другите две.</p></div></div>
     <div class="btn-row" style="margin-top:24px"><a class="btn btn-primary" href="/prices#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18.5h.01M12 18.5h.01"/></svg> Изчисли цената</a><a class="btn btn-ghost" href="/contacts#form">Поискай безплатен демо</a></div>
   </div>
 </section>
@@ -125,6 +125,6 @@
   <a class="viber" href="viber://chat?number=%2B359897720103"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/><path d="M9.5 9.5c.3 1.8 1.3 3.3 3 4.5"/></svg>Viber</a>
   <a href="/prices#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18.5h.01M12 18.5h.01"/></svg>Цена</a>
 </nav>
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>

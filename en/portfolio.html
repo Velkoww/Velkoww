@@ -19,14 +19,15 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F7F7F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0E1014" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F4F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0F14" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="preload" href="/assets/fonts/inter-var-latin-cyrillic.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preload" href="/assets/fonts/sofia-sans-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/fonts/unbounded-700.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css?v=2">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -44,15 +45,14 @@
   <nav id="mobile-menu" class="mobile-menu" aria-label="Menu"><a href="/en/">Home</a><a href="/en/services">Services</a><a href="/en/prices">Pricing</a><a href="/en/portfolio" aria-current="page">Work</a><a href="/en/contacts">Contact</a></nav>
 </header>
 <main id="main">
-
-<div class="wrap page-head">
+<div class="wrap"><div class="page-head">
   <span class="eyebrow">Work</span>
   <h1>Real projects, real results</h1>
   <p class="lead">Websites that work for the business every day. You can verify every result yourself.</p>
-</div>
+</div></div>
 <section>
   <div class="wrap">
-    <article class="card case">
+    <article class="case">
       <div class="shots">
         <img class="shot-desk" src="/assets/img/lockme-desktop.webp" width="1440" height="900" alt="lockmebg.com home page on desktop" loading="lazy">
         <img class="shot-mob" src="/assets/img/lockme-mobile.webp" width="390" height="844" alt="lockmebg.com on a phone" loading="lazy">
@@ -73,10 +73,10 @@
           <div class="metric"><b>0</b><span>Layout shift</span></div>
           <div class="metric"><b>225 KB</b><span>Page weight</span></div>
         </div>
-        <div class="btn-row"><a class="btn btn-primary" href="https://lockmebg.com/en/" target="_blank" rel="noopener">Visit lockmebg.com <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Flockmebg.com" target="_blank" rel="noopener">Test the speed yourself</a></div>
+        <div class="btn-row"><a class="btn btn-primary" href="https://lockmebg.com/en/" target="_blank" rel="noopener">Visit lockmebg.com <svg class="go" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Flockmebg.com" target="_blank" rel="noopener">Test the speed yourself</a></div>
       </div>
     </article>
-    <article class="card case" id="aneto" style="margin-top:24px;scroll-margin-top:90px">
+    <article class="case" id="aneto">
       <div class="shots">
         <img class="shot-desk" src="/assets/img/aneto-desktop.webp" width="1440" height="900" alt="aneto.bg home page on desktop" loading="lazy">
         <img class="shot-mob" src="/assets/img/aneto-mobile.webp" width="390" height="844" alt="aneto.bg on a phone" loading="lazy">
@@ -97,7 +97,7 @@
           <div class="metric"><b>0</b><span>Layout shift</span></div>
           <div class="metric"><b>296 KB</b><span>Page weight</span></div>
         </div>
-        <div class="btn-row"><a class="btn btn-primary" href="https://aneto.bg/en/" target="_blank" rel="noopener">Visit aneto.bg <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Faneto.bg" target="_blank" rel="noopener">Test the speed yourself</a></div>
+        <div class="btn-row"><a class="btn btn-primary" href="https://aneto.bg/en/" target="_blank" rel="noopener">Visit aneto.bg <svg class="go" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Faneto.bg" target="_blank" rel="noopener">Test the speed yourself</a></div>
       </div>
     </article>
   </div>
@@ -106,7 +106,7 @@
   <div class="wrap">
     <h2>Technical test of lockmebg.com</h2>
     <p class="muted" style="max-width:760px">Tested on the home page, on a phone, with simulated slow mobile internet (4G) and a 4× slower CPU, without third-party analytics scripts. You can run Google's official test with the button above.</p>
-    <div class="card" style="overflow-x:auto;margin-top:16px">
+    <div class="table-wrap">
       <table class="audit">
         <thead><tr><th>Check</th><th>Result</th><th>What it means</th></tr></thead>
         <tbody>
@@ -158,6 +158,6 @@
   <a class="viber" href="viber://chat?number=%2B359897720103"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/><path d="M9.5 9.5c.3 1.8 1.3 3.3 3 4.5"/></svg>Viber</a>
   <a href="/en/prices#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3M8 18.5h.01M12 18.5h.01"/></svg>Price</a>
 </nav>
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=2" defer></script>
 </body>
 </html>
