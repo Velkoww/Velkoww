@@ -76,6 +76,7 @@ p{margin:0 0 1em}
 .mobile-menu a{display:block;padding:13px 4px;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none;font-weight:700}
 .mobile-menu a[aria-current="page"]{color:var(--accent)}
 @media (min-width:860px){.menu{display:flex}.menu-btn{display:none}.btn.header-cta{display:inline-flex}.mobile-menu{display:none!important}}
+@media (min-width:860px) and (max-width:1079px){.menu a{padding:8px 8px}.btn.header-cta{display:none!important}}
 
 /* Бутони */
 .btn{text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;font:800 1rem/1.2 var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease,border-color .15s ease,color .15s ease}
